@@ -11,8 +11,5 @@ const activeWindow = require('./activeWindowTitle.node')
 console.log(activeWindow.title()) 
 ```
 
-## To-Do
-Convert code to asynchronus function to maintain Tera-Proxy stability. Currently code takes ~10-15ms per call.
-
 ## Advice
 Advice is appreciated if anyone is experienced in creating a simple interface to use windows native methods in nodeJS using no dependencies.
