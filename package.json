@@ -1,0 +1,17 @@
+{
+  "name": "activeWindowTitle",
+  "version": "1.0.0",
+  "main": "index.js",
+  "private": true,
+  "gypfile": true,
+  "scripts": {
+    "build": "node-gyp rebuild",
+    "clean": "node-gyp clean"
+  },
+  "dependencies": {
+    "node-addon-api": "^0.6.3"
+  },
+  "devDependencies": {
+    "node-gyp": "^3.7.0"
+  }
+} 
