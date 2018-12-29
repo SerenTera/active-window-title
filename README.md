@@ -13,3 +13,6 @@ console.log(activeWindow.title())
 
 ## To-Do
 Convert code to asynchronus function to maintain Tera-Proxy stability. Currently code takes ~10-15ms per call.
+
+## Advice
+Advice is appreciated if anyone experienced in creating a simple interface for nodejs that allows foreground window title to be detected using no dependencies can help.
