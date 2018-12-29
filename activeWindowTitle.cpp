@@ -2,7 +2,8 @@
 #include <windows.h>
 #include <string>
 
-namespace awtnamespace {
+namespace awtnamespace
+{
   std::string GetActiveWindowTitle();
   Napi::String Wrapper(const Napi::CallbackInfo& info);
   Napi::Object Init(Napi::Env env, Napi::Object exports);
@@ -19,20 +20,21 @@ std::string awtnamespace::GetActiveWindowTitle()
 
 Napi::String awtnamespace::Wrapper(const Napi::CallbackInfo& info)
 {
-	Napi::Env env = info.Env();
-	Napi::String returnValue = Napi::String::New(env, awtnamespace::GetActiveWindowTitle());
-	
-	return returnValue;
+  Napi::Env env = info.Env();
+  Napi::String returnValue = Napi::String::New(env, awtnamespace::GetActiveWindowTitle());
+
+  return returnValue;
 }
 
 Napi::Object awtnamespace::Init(Napi::Env env, Napi::Object exports)
 {
-	exports.Set("title", Napi::Function::New(env, awtnamespace::Wrapper));
-	
-	return exports;
+  exports.Set("title", Napi::Function::New(env, awtnamespace::Wrapper));
+  
+  return exports;
 }
 
-Napi::Object InitAll(Napi::Env env, Napi::Object exports) {
+Napi::Object InitAll(Napi::Env env, Napi::Object exports)
+{
   return awtnamespace::Init(env,exports);
 }
 
