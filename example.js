@@ -1,5 +1,12 @@
-const Title = require('./build/Release/activeWindowTitle.node');
+const activeWindow = require('./build/Release/activeWindowTitle.node');
+let processTitle ="TERA";
 
-console.log(Title.title());
+console.time('test')
 
-module.exports = Title;
+let title = activeWindow.title()
+
+console.timeEnd('test')
+console.log('henlo')
+console.log(title)
+
+module.exports = activeWindow;
