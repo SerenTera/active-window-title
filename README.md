@@ -22,5 +22,13 @@ const activeWindow = require('activeWindowTitle')
 //Display title of current foreground window
 console.log(activeWindow.title()) 
 ```
+## Tera Proxy
+Since Proxy unloads all modules and their child modules, the re-requiring of node native addons will throw error. A workaround is to use the global namespace, thus, use this method to require this addons in your projects if you are creating modules for Tera Proxy. Since a few of my modules have used the `activeWindow` variable in the global namespace, use this same variable too, to reduce namespace pollution. You can require the module like so:
+```
+if(!global.activeWindow) global.activeWindow = require(./activeWindowTitle.node)
+
+console.log(activeWindow.title())
+```
+
 ## Advice
 Advice is appreciated if anyone is experienced in creating a simple interface to use windows native methods in nodeJS using no dependencies.
